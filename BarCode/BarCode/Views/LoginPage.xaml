@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BarCode.Views.LoginPage"
+             Shell.NavBarIsVisible="True"
+             Shell.FlyoutBehavior="Flyout">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <AbsoluteLayout x:Name="absLayout" Margin="5,0" IsVisible="True">
+                <FlexLayout IsVisible="True" JustifyContent="SpaceEvenly" Direction="Column" AlignItems="Center" Margin="30,0,30,0" >
+                    <Image Source="logo.png" HeightRequest="160" WidthRequest="280" FlexLayout.AlignSelf="Center" BackgroundColor="Transparent" />
+                    <Entry x:Name="userNameEntry" ReturnType="Next" Placeholder="Username" FontSize="Medium" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"  TextColor="Black" />
+                    <Entry x:Name="passwordEntry" ReturnType="Done" IsPassword="True" Placeholder="Password" FontSize="Medium" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"  TextColor="Black" />
+                    <Button x:Name="signUp" Clicked="LoginValidation_ButtonClicked" FontSize="Medium" TextColor="Black" BorderColor="Black" BackgroundColor="#FFFF66"  CornerRadius="5" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand" Text="Log in"/>
+                </FlexLayout>
+                
+            </AbsoluteLayout>
+        </ScrollView>
+
+
+
+    </ContentPage.Content>
+</ContentPage> 

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BarCode.Views.AboutPage"
+             xmlns:vm="clr-namespace:BarCode.ViewModels"
+             Title="{Binding Title}"
+             Shell.NavBarIsVisible="True"
+             Shell.FlyoutBehavior="Flyout">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,10,0,10" VerticalOptions="FillAndExpand">
+                    <Image Source="logo.png" VerticalOptions="Center" WidthRequest="200" MinimumHeightRequest="100" MinimumWidthRequest="200" HeightRequest="130" />
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,20,30,24" >
+                <Label Text="About us" FontAttributes="Bold" FontSize="25" TextColor="Black" HorizontalTextAlignment="Start"></Label>
+                <Label Text="We are the leading company specialising in the development and production of interior and exterior car components in Croatia and one of the leading companies in Eastern Europe." 
+                       FontSize="Medium" FontAttributes="Bold" Padding="0,10,0,30"  />
+                <Image Source="adpGrupa.jpg" VerticalOptions="Center" ></Image>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
